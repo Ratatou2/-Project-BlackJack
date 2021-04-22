@@ -38,7 +38,7 @@ def checkCard(define):
     elif define == 'K':
         return 10
     elif define == 'A':
-        print("A를 1과 11 둘중 하나로 사용할 수 있습니다\n 어느쪽으로 사용하시겠습니까?")
+        print("<System> A를 1과 11 둘중 하나로 사용할 수 있습니다\n<System> 어느쪽으로 사용하시겠습니까?\n1) A를 1로 계산\n2) A를 11로 계산")
         while True:
             try:
                 ans = int(input())
@@ -50,7 +50,7 @@ def checkCard(define):
                     break
 
             except ValueError:
-                print("A를 1과 11 둘중 하나로 사용할 수 있습니다\n 어느쪽으로 사용하시겠습니까?")
+                print("<System> A를 1과 11 둘중 하나로 사용할 수 있습니다\n<System> 어느쪽으로 사용하시겠습니까?\n1) A를 1로 계산\n2) A를 11로 계산")
 
         if ans == 1:
             return 1
@@ -156,7 +156,6 @@ def playerAndDealer():
                 if ans < 0:
                     print("1과 2 둘중 하나를 골라주세요")
                 else:
-                    print(ans)
                     break
 
             except ValueError:
